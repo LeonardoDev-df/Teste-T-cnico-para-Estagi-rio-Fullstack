@@ -8,18 +8,18 @@ O teste está organizado em duas pastas: uma para o **frontend** e outra para o 
 
 ### Frontend
 - A aplicação frontend está hospedada no Vercel.
-- [Link para o frontend](#) *(Vou passar o link em breve)*
+- [Link para o frontend](#) *(https://teste-tecnico-para-estagiario-fullstack.vercel.app/)*
 
 ### Backend
 - Para executar o backend localmente:
   1. Navegue até a pasta do backend:
      ```bash
-     cd nome-da-pasta
+     cd task-manager-backend
      ```
   2. Execute o backend na sua máquina:
      ```bash
      npm install
-     npm start
+     npx nodemon server.js
      ```
 
 Certifique-se de seguir as instruções acima e que tudo esteja claro e organizado. Se precisar de mais informações ou esclarecimentos, não hesite em perguntar.
