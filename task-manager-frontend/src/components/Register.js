@@ -1,36 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../context/AuthContext';
 import styles from '../styles/Register.module.css';
 
-const Register = ({ onRegister }) => {
+const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const { register } = useContext(AuthContext);
+  const navigate = useNavigate();
 
-  const validateEmail = (email) => {
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailPattern.test(email);
-  };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setError('');
-
-    if (!email || !password) {
-      setError('Todos os campos são obrigatórios.');
-      return;
+    try {
+      await register({ email, password });
+      navigate('/');
+    } catch (error) {
+      setError('Falha ao registrar usuário. Verifique suas credenciais e tente novamente.');
     }
-
-    if (!validateEmail(email)) {
-      setError('Email inválido.');
-      return;
-    }
-
-    if (password.length < 6) {
-      setError('A senha deve ter pelo menos 6 caracteres.');
-      return;
-    }
-
-    onRegister({ email, password });
   };
 
   return (

@@ -1,0 +1,21 @@
+/* src/styles/TaskList.module.css */
+
+/* Container da lista de tarefas */
+.container {
+  margin-top: 20px; /* Espaçamento superior */
+}
+
+/* Lista de tarefas */
+.taskList {
+  list-style: none; /* Remove os marcadores da lista */
+  padding: 0; /* Remove o padding padrão */
+  margin: 0; /* Remove a margem padrão */
+}
+
+/* Mensagem quando não há tarefas */
+.noTasks {
+  font-style: italic; /* Itálico para mensagem de ausência */
+  color: #666; /* Cor do texto mais suave */
+  text-align: center; /* Centraliza o texto */
+  margin-top: 20px; /* Espaçamento superior */
+}

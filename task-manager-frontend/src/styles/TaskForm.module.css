@@ -1,0 +1,58 @@
+/* src/styles/TaskForm.module.css */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+}
+
+.field {
+  margin-bottom: 30px; /* Aumenta o espaço entre os campos */
+}
+
+.label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.input, .textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box; /* Inclui padding e border no width total */
+}
+
+.textarea {
+  height: 100px; /* Define uma altura para a textarea */
+  resize: vertical; /* Permite que a textarea seja redimensionada verticalmente */
+}
+
+.button {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #2196f3;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.2s; /* Adiciona transição suave */
+}
+
+.button:hover {
+  background-color: #1976d2;
+  transform: translateY(-2px); /* Efeito de elevação no hover */
+}
+
+.button:active {
+  transform: translateY(1px); /* Efeito de clique */
+}

@@ -1,0 +1,72 @@
+/* src/styles/TaskItem.module.css */
+
+/* Container do item de tarefa */
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+}
+
+.content {
+  flex: 1;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 14px;
+  color: #1d0cb3;
+}
+
+.actions {
+  display: flex;
+  gap: 10px; /* Espaçamento entre os botões */
+}
+
+.button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.2s; /* Adiciona transição suave */
+}
+
+.editButton {
+  background-color: #4caf50; /* Verde para edição */
+  color: #fff;
+}
+
+.editButton:hover {
+  background-color: #388e3c;
+  transform: translateY(-2px); /* Efeito de elevação no hover */
+}
+
+.deleteButton {
+  background-color: #f44336; /* Vermelho para exclusão */
+  color: #fff;
+}
+
+.deleteButton:hover {
+  background-color: #c62828;
+  transform: translateY(-2px); /* Efeito de elevação no hover */
+}
+
+.toggleButton {
+  background-color: #2196f3; /* Azul para marcar/desmarcar */
+  color: #fff;
+}
+
+.toggleButton:hover {
+  background-color: #1976d2;
+  transform: translateY(-2px); /* Efeito de elevação no hover */
+}

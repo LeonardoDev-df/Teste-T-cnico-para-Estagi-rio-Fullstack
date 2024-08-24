@@ -1,14 +1,22 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../context/AuthContext';
 import styles from '../styles/Login.module.css';
 
-const Login = ({ onLogin }) => {
+const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const { login, loginError } = useContext(AuthContext);
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    onLogin({ email, password });
+    try {
+      await login({ email, password });
+      // Se o login falhar, a função login definirá a mensagem de erro e não redirecionará
+    } catch (error) {
+      // O erro já é tratado pelo AuthProvider
+    }
   };
 
   return (
@@ -29,6 +37,7 @@ const Login = ({ onLogin }) => {
           className={styles.input}
         />
         <button type="submit" className={styles.button}>Login</button>
+        {loginError && <p className={styles.error}>{loginError}</p>} {/* Exibir mensagem de erro */}
       </form>
       <p className={styles.redirect}>
         Não tem uma conta? <Link to="/register" className={styles.link}>Cadastre-se</Link>

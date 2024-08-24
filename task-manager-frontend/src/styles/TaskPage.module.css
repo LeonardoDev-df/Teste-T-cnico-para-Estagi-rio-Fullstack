@@ -1,0 +1,42 @@
+/* src/styles/TaskPage.module.css */
+
+/* Container da página */
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra ao redor */
+  border-radius: 8px; /* Cantos arredondados */
+  background-color: #f9f9f9; /* Cor de fundo suave */
+}
+
+/* Cabeçalho */
+.heading {
+  font-size: 2rem; /* Ajusta o tamanho da fonte */
+  margin-bottom: 20px;
+  color: #333; /* Cor do texto */
+  font-weight: bold; /* Fonte em negrito */
+}
+
+/* Botão de logout */
+.logoutButton {
+  padding: 12px 20px; /* Ajusta o padding para um tamanho mais consistente */
+  background-color: #dc3545; /* Cor de fundo */
+  color: #fff; /* Cor do texto */
+  border: none;
+  border-radius: 6px; /* Cantos arredondados */
+  cursor: pointer;
+  font-size: 1rem; /* Tamanho da fonte */
+  transition: background-color 0.3s ease; /* Transição suave na mudança de cor */
+  margin-bottom: 20px;
+}
+
+.logoutButton:hover {
+  background-color: #c82333; /* Cor de fundo ao passar o mouse */
+}
+
+/* Adiciona uma margem ao redor de formulários e listas de tarefas, se necessário */
+.formContainer,
+.taskList {
+  margin-bottom: 20px;
+}
