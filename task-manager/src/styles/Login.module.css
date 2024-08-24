@@ -1,0 +1,56 @@
+.container {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh; /* Centraliza verticalmente */
+  background-color: #f5f5f5; /* Fundo claro */
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 300px; /* Largura fixa para o formulário */
+  padding: 10px;
+  background-color: #ffffff; /* Fundo branco */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.button {
+  padding: 10px;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button:hover {
+  background-color: #1976d2;
+}
+
+.redirect {
+  margin-top: 25px;
+  font-size: 14px;
+  color: #333;
+}
+
+.link {
+  color: #2196f3;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

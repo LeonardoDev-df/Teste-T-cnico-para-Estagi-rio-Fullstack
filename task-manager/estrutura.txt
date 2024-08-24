@@ -1,0 +1,16 @@
+src/
+├── components/
+│   ├── TaskList.js
+│   ├── TaskForm.js
+│   ├── TaskItem.js
+│   ├── Login.js
+│   └── Register.js
+├── pages/
+│   ├── LoginPage.js
+│   ├── RegisterPage.js
+│   └── TaskPage.js
+├── context/
+│   └── AuthContext.js
+├── App.js
+├── index.js
+└── App.css (opcional para estilização)

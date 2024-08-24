@@ -1,1 +1,0 @@
-# Teste-T-cnico-para-Estagi-rio-Fullstack
